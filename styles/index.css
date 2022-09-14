@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     body {
-        @apply bg-[#141414] text-white;
+        @apply bg-[#a0d2eb]
     }
 }
-
 @layer components {
     .headerLink {
         @apply cursor-pointer font-light text-[#e5e5e5] transition duration-[.4s] hover:text-[#b3b3b3]
+    }
+
+    .suggestionCard {
+        @apply items-center bg-[#d0bdf4] rounded-lg text-lg border-2 border-[#d0bdf4] transition duration-[.2s] hover:border-[#494D5f]
+    }
+
+    .suggestionInfo  {
+        @apply font-bold font-mono text-[#494D5f]
+    }
+
+    .suggestionImg {
+        @apply rounded-full h-48 w-48
     }
 }

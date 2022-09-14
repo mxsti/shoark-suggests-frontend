@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/Header'
+import SuggestionCard from '../components/SuggestionCard'
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>SHOARK SUGGESTS</title>
       </Head>
-      <Header />
+      <SuggestionCard />
     </div>
   )
 }

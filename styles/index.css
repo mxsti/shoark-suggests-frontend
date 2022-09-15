@@ -15,7 +15,7 @@
     }
 
     .suggestionCard {
-        @apply items-center bg-[#d0bdf4] rounded-lg text-lg border-2 border-[#d0bdf4] transition duration-[.2s] hover:border-[#494D5f]
+        @apply grid gap-2 grid-cols-4 items-center bg-[#d0bdf4] rounded-lg text-lg border-2 border-[#d0bdf4] transition duration-[.2s] hover:border-[#494D5f]
     }
 
     .suggestionInfo  {

@@ -1,14 +1,10 @@
-type SuggestionProps = {
-    thumbnail: string,
-    name: string,
-    streamingService: string,
-    genre: string,
-    rating: string,
+type SuggestionProps = Suggestion & {
+  hover: boolean,
 }
 
 const SuggestionCard = (props: SuggestionProps) => {
   return(
-    <div className="suggestionCard">
+    <div className={`suggestionCard ${props.hover ? "border-netflixDarkRed" : ""}`}>
       <div className="col-span-2 p-2">
         <img className="suggestionImg" src={props.thumbnail} />
       </div>

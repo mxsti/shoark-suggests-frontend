@@ -1,0 +1,77 @@
+const suggestionsDummy: Suggestion[] = 
+  [
+    {
+      id: 1,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 2,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Breaking Bad",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 3,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 4,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 5,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 6,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 7,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 8,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+    {
+      id: 9,
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      name: "Stranger Things",
+      streamingService: "Netflix",
+      genre: "Drama, Fantasy, Horror",
+      rating: "8.7",
+    },
+  ]
+
+  export default suggestionsDummy

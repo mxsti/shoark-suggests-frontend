@@ -7,8 +7,14 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      mono: ['Roboto Condensed', 'mono']
-    }
+      mono: ['Kanit', 'mono']
+    },
+    colors: {
+      netflixRed: "#E50914",
+      netflixDarkRed: "#B81D24",
+      netflixBlack: "#221F1F",
+      netflixWhite: "#F5F5F1",
+    },
   },
   plugins: [],
 }

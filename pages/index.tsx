@@ -1,38 +1,46 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
+import RandomSuggestionButton from '../components/RandomSuggestionButton';
 import SuggestionCard from '../components/SuggestionCard'
-
-const suggestionsDummy = 
-  [{
-      thumbnail: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
-      name: "Stranger Things",
-      streamingService: "Netflix",
-      genre: "Drama, Fantasy, Horror",
-      rating: "8.7",
-  }]
+import suggestionsDummy from '../sampleData';
 
 const Home: NextPage = () => {
-  const [suggestions, setSuggestions] = useState(suggestionsDummy);
-
+  const [suggestions, setSuggestions] = useState<Suggestion[]>(suggestionsDummy);
+  
   return (
     <div>
       <Head>
         <title>SHOARK SUGGESTS</title>
       </Head>
-      <div className="flex justify-center items-center h-screen">
-        {suggestions && suggestions.map((suggestion,index) => {
-          const suggestionIndentifier = `s-${index}`;
-          <div id={suggestionIndentifier}>
-            <SuggestionCard 
-              thumbnail={suggestion.thumbnail}
-              name={suggestion.name}
-              streamingService={suggestion.streamingService}
-              genre={suggestion.genre}
-              rating={suggestion.rating}
-            />
-          </div>
+      <div className="grid grid-cols-4">
+
+        <div className="flex-row space-x-8 px-4 col-span-1">
+          <RandomSuggestionButton suggestions={suggestions} />
+          <RandomSuggestionButton suggestions={suggestions} />
+        </div>
+
+        <div className="col-start-2 col-span-2">
+
+        {suggestions.map((suggestion) => {
+          const suggestionIdentifier = `s-${suggestion.id}`
+          return(
+
+            <div id={suggestionIdentifier} className="p-2">
+              <SuggestionCard 
+                id={suggestion.id}
+                thumbnail={suggestion.thumbnail}
+                name={suggestion.name}
+                streamingService={suggestion.streamingService}
+                genre={suggestion.genre}
+                rating={suggestion.rating}
+                hover={false}
+              />
+            </div>
+          )
         })}
+
+        </div>
       </div>
     </div>
   )

@@ -12,7 +12,7 @@
 @layer components {
 
     .suggestionCard {
-        @apply grid gap-2 grid-cols-4 items-center bg-netflixRed rounded-lg text-lg border-4 border-netflixWhite
+        @apply grid gap-2 grid-cols-4 items-center bg-netflixRed rounded-lg text-lg border-4 border-netflixWhite transition duration-[.2s] hover:border-netflixDarkRed
     }
 
     .suggestionInfo  {

@@ -1,10 +1,6 @@
-type SuggestionProps = Suggestion & {
-  hover: boolean,
-}
-
-const SuggestionCard = (props: SuggestionProps) => {
+const SuggestionCard = (props: Suggestion) => {
   return(
-    <div className={`suggestionCard ${props.hover ? "border-netflixDarkRed" : ""}`}>
+    <div className={`suggestionCard ${props.favourite ? "border-[#d4af37]" : ""}`}>
       <div className="col-span-2 p-2">
         <img className="suggestionImg" src={props.thumbnail} />
       </div>

@@ -5,5 +5,4 @@ type Suggestion = {
     streamingService: string,
     genre: string,
     rating: string,
-    favourite?: boolean,
 }

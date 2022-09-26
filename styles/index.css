@@ -6,13 +6,13 @@
 
 @layer base {
     body {
-        @apply bg-netflixBlack font-mono text-netflixWhite
+        @apply bg-grey font-mono
     }
 }
 @layer components {
 
     .suggestionCard {
-        @apply grid gap-2 grid-cols-4 items-center bg-netflixRed rounded-lg text-lg border-4 border-netflixWhite transition duration-[.2s] hover:border-netflixDarkRed
+        @apply grid gap-2 grid-cols-5 items-center bg-grey rounded-lg text-lg shadow-xl border-2 border-grey  transition ease-in-out delay-75 hover:scale-105
     }
 
     .suggestionInfo  {
@@ -24,6 +24,6 @@
     }
 
     .suggestionButton {
-        @apply bg-netflixRed sticky top-4 font-bold py-2 px-4 border-2 border-netflixWhite transition duration-[.2s] hover:border-netflixDarkRed rounded-full
+        @apply bg-blue sticky top-4 font-bold py-2 px-4 shadow-md shadow-blue rounded-full transition ease-in-out delay-75 hover:scale-105
     }
 }

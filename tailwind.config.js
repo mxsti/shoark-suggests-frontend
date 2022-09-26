@@ -10,10 +10,8 @@ module.exports = {
       mono: ['Kanit', 'mono']
     },
     colors: {
-      netflixRed: "#E50914",
-      netflixDarkRed: "#B81D24",
-      netflixBlack: "#221F1F",
-      netflixWhite: "#F5F5F1",
+      "blue": "#33FFCC",
+      "grey": "#F8F8F8"
     },
   },
   plugins: [],

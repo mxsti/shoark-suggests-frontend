@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import suggestionsDummy from "../sampleData";
 import ApiCall from "../utils/apicall";
 import SuggestionCard from "./SuggestionCard"
 
@@ -7,15 +8,18 @@ const SuggestionList = () => {
   const [suggestions, setSuggestions] = useState<Suggestion[] | null>(null);
 
   useEffect(() => {
-    ApiCall<Suggestion[]>()
-      .then((response) => {
-        setSuggestions(response);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      })
+    setSuggestions(shuffleArray(suggestionsDummy));
   });
 
+  const shuffleArray = (suggestions: Suggestion[]) => {
+    let array = suggestions;
+    // durstenfeld shuffle (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
   // scroll to in native JS, because...
   const scrollToRandomSuggestion = () => {
@@ -46,11 +50,13 @@ const SuggestionList = () => {
             <div id={identifier} className="p-2 rounded-lg suggestionDiv">
               <SuggestionCard
                 id={suggestion.id}
+                imdbId={suggestion.imdbId}
                 thumbnail={suggestion.thumbnail}
                 name={suggestion.name}
                 streamingService={suggestion.streamingService}
                 genre={suggestion.genre}
                 rating={suggestion.rating}
+                runtime={suggestion.runtime}
               />
             </div>
           )

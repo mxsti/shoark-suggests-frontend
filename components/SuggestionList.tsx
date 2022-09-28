@@ -8,8 +8,11 @@ const SuggestionList = () => {
   const [suggestions, setSuggestions] = useState<Suggestion[] | null>(null);
 
   useEffect(() => {
-    setSuggestions(shuffleArray(suggestionsDummy));
-  });
+    ApiCall()
+      .then((data) => {
+        setSuggestions(shuffleArray(data));
+      })
+  }, []);
 
   const shuffleArray = (suggestions: Suggestion[]) => {
     let array = suggestions;
@@ -24,7 +27,7 @@ const SuggestionList = () => {
   // scroll to in native JS, because...
   const scrollToRandomSuggestion = () => {
     const scrollTo = suggestions[Math.floor(Math.random() * suggestions.length)];
-    
+
     // remove background from all suggestions
     const allDivs = document.getElementsByClassName("suggestionDiv");
     for (let i = 0; i < allDivs.length; i++) {
@@ -32,8 +35,8 @@ const SuggestionList = () => {
     }
 
     // scroll random element into view and set background
-    const htmlElement = document.getElementById(`s-${scrollTo.id}`);
-    htmlElement.scrollIntoView({ behavior: "smooth", block: "center"});
+    const htmlElement = document.getElementById(`s-${scrollTo.imdbId}`);
+    htmlElement.scrollIntoView({ behavior: "smooth", block: "center" });
     htmlElement.classList.remove("opacity-25");
   };
 
@@ -45,15 +48,13 @@ const SuggestionList = () => {
 
       <div className="col-start-2 col-span-2">
         {suggestions && suggestions.map((suggestion) => {
-          const identifier = `s-${suggestion.id}`
+          const identifier = `s-${suggestion.imdbId}`
           return (
             <div id={identifier} className="p-2 rounded-lg suggestionDiv">
               <SuggestionCard
-                id={suggestion.id}
                 imdbId={suggestion.imdbId}
                 thumbnail={suggestion.thumbnail}
                 name={suggestion.name}
-                streamingService={suggestion.streamingService}
                 genre={suggestion.genre}
                 rating={suggestion.rating}
                 runtime={suggestion.runtime}

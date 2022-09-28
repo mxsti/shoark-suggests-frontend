@@ -11,7 +11,8 @@ module.exports = {
     },
     colors: {
       "blue": "#33FFCC",
-      "grey": "#F8F8F8"
+      "grey": "#F8F8F8",
+      "emoji-yellow": "#ffde34",
     },
   },
   plugins: [],

@@ -12,18 +12,14 @@
 @layer components {
 
     .suggestionCard {
-        @apply grid gap-2 grid-cols-5 items-center bg-grey rounded-lg text-lg shadow-xl border-2 border-grey  transition ease-in-out delay-75 hover:scale-105
-    }
-
-    .suggestionInfo  {
-        @apply font-bold
+        @apply grid gap-2 grid-cols-5 items-center bg-grey rounded-lg text-lg shadow-xl border-2 border-grey  transition ease-in-out delay-75 hover:scale-105 hover:shadow-lg hover:shadow-emoji-yellow
     }
 
     .suggestionImg {
-        @apply rounded-full h-48 w-48
+        @apply h-48 w-32 rounded-xl
     }
 
     .suggestionButton {
-        @apply bg-blue sticky top-4 font-bold py-2 px-4 shadow-md shadow-blue rounded-full transition ease-in-out delay-75 hover:scale-105
+        @apply bg-emoji-yellow sticky top-4 font-bold py-2 px-4 shadow-md shadow-emoji-yellow rounded-full transition ease-in-out delay-75 hover:scale-105
     }
 }

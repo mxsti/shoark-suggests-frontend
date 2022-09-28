@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import suggestionsDummy from "../sampleData";
 import ApiCall from "../utils/apicall";
 import SuggestionCard from "./SuggestionCard"
 
